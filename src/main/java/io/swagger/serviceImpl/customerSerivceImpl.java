@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ReflectionUtils;
+import org.springframework.validation.Errors;
 
 import io.swagger.dao.customerDao;
 import io.swagger.model.Customer;
@@ -43,6 +44,12 @@ public class customerSerivceImpl  implements customerService{
 
 	@Override
 	public Customer saveCustomer(Customer customer) {
+		boolean isExists = customerdao.exists(customer.getId());
+		org.springframework.validation.Errors error = null;
+		
+		if(isExists) {
+			error.reject("customer already present");
+		}
 		return customerdao.save(customer);
 	}
 

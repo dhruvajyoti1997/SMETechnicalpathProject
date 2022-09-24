@@ -51,7 +51,7 @@ public class CustomerApiController implements CustomerApi {
 			}
 		} catch (Exception e) {
 
-			return new ResponseEntity<Customer>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
 		}
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
 	}
