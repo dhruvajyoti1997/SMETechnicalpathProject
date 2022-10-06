@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.annotations.ApiParam;
 import io.swagger.model.Customer;
-import io.swagger.model.CustomerUpdate;
 import io.swagger.service.customerService;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2022-08-24T07:46:52.134Z")
@@ -51,7 +51,8 @@ public class CustomerApiController implements CustomerApi {
 			}
 		} catch (Exception e) {
 
-			return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
+			//return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
+			throw new DuplicateKeyException(String.valueOf(e));
 		}
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
 	}
