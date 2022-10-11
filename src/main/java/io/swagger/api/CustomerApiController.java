@@ -51,7 +51,7 @@ public class CustomerApiController implements CustomerApi {
 			}
 		} catch (Exception e) {
 
-			//return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
+			// return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
 			throw new DuplicateKeyException(String.valueOf(e));
 		}
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
@@ -151,6 +151,21 @@ public class CustomerApiController implements CustomerApi {
 			}
 		} catch (Exception e) {
 
+			return new ResponseEntity<Customer>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
+	}
+
+	@Override
+	public ResponseEntity<Customer> updateCustomer(@Valid @RequestBody Customer customer) {
+		String accept = request.getHeader("Accept");
+		try {
+			if (accept != null && accept.contains("application/json")) {
+				return new ResponseEntity<Customer>(service.updateCustomerDetails(customer), HttpStatus.OK);
+			}
+		} catch (Exception e) {
+
+			// return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
 			return new ResponseEntity<Customer>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);

@@ -26,7 +26,6 @@ public class Customer {
 	private String phoneNumber;
 	private String emailId;
 	private String address;
-	
 
 	public Customer() {
 		super();

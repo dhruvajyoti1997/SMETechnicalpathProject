@@ -95,9 +95,8 @@ public interface CustomerApi {
 //	@RequestMapping(value = "/{field}", method = RequestMethod.GET)
 //	ResponseEntity<List<Customer>> listCustomerWithSorting(@PathVariable String field);
 
-	
-	  @RequestMapping(value = "/{limit}", method = RequestMethod.GET)
-	  ResponseEntity<List<Customer>> listCustomerWithSLimit(@PathVariable int  limit);
+	@RequestMapping(value = "/{limit}", method = RequestMethod.GET)
+	ResponseEntity<List<Customer>> listCustomerWithSLimit(@PathVariable int limit);
 
 	@ApiOperation(value = "Updates partially a Customer", nickname = "patchCustomer", notes = "This operation updates partially a Customer entity.", response = Customer.class, tags = {
 			"customer", })
@@ -113,7 +112,7 @@ public interface CustomerApi {
 			"application/json;charset=utf-8" }, method = RequestMethod.PATCH)
 	ResponseEntity<Customer> patchCustomer(
 			@ApiParam(value = "Identifier of the Customer", required = true) @PathVariable("id") Long id,
-			@ApiParam(value = "The Customer to be updated", required = true) @Valid @RequestBody Map<Object , Object> objectMap);
+			@ApiParam(value = "The Customer to be updated", required = true) @Valid @RequestBody Map<Object, Object> objectMap);
 
 	@ApiOperation(value = "Retrieves a Customer by ID", nickname = "retrieveCustomer", notes = "This operation retrieves a Customer entity. Attribute selection is enabled for all first level attributes.", response = Customer.class, tags = {
 			"customer", })
@@ -128,5 +127,20 @@ public interface CustomerApi {
 	@RequestMapping(value = "/customer/{id}", method = RequestMethod.GET)
 	ResponseEntity<Customer> retrieveCustomer(
 			@ApiParam(value = "Identifier of the Customer", required = true) @PathVariable("id") Long id);
+
+	@ApiOperation(value = "Update  Customer Details", nickname = "patchCustomer", notes = "This operation updates Customer entity.", response = Customer.class, tags = {
+			"customer", })
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Updated", response = Customer.class),
+			@ApiResponse(code = 400, message = "Bad Request", response = Error.class),
+			@ApiResponse(code = 401, message = "Unauthorized", response = Error.class),
+			@ApiResponse(code = 403, message = "Forbidden", response = Error.class),
+			@ApiResponse(code = 404, message = "Not Found", response = Error.class),
+			@ApiResponse(code = 405, message = "Method Not allowed", response = Error.class),
+			@ApiResponse(code = 409, message = "Conflict", response = Error.class),
+			@ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
+	@RequestMapping(value = "/customer/updateDetails", produces = { "application/json;charset=utf-8" }, consumes = {
+			"application/json;charset=utf-8" }, method = RequestMethod.PUT)
+	ResponseEntity<Customer> updateCustomer(
+			@ApiParam(value = "Identifier of the Customer", required = true) @Valid @RequestBody Customer customer);
 
 }
