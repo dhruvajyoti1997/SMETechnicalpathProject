@@ -4,7 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
 
 /**
@@ -19,12 +23,23 @@ import org.springframework.validation.annotation.Validated;
 public class Customer {
 
 	@Id
+	@NotNull
 	private Long id;
+	
+	@NotBlank
 	private String name;
+	@NotBlank
 	private String status;
+	@NotBlank
+	@Size(message = "it should have 12 digit number")
 	private String accountNumber;
+	@NotBlank
+	@Size(message = "it should have 10 digit number")
 	private String phoneNumber;
+	@Email
+	@NotBlank
 	private String emailId;
+	@NotBlank
 	private String address;
 
 	public Customer() {

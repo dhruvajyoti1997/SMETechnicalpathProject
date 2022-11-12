@@ -36,6 +36,7 @@ public class CustomerApiController implements CustomerApi {
 
 	@Autowired
 	private customerService service;
+	
 
 	@org.springframework.beans.factory.annotation.Autowired
 	public CustomerApiController(ObjectMapper objectMapper, HttpServletRequest request) {
@@ -54,10 +55,11 @@ public class CustomerApiController implements CustomerApi {
 			// return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
 			throw new DuplicateKeyException(String.valueOf(e));
 		}
+		
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
 	}
 
-	public ResponseEntity<Void> deleteCustomer(
+	public ResponseEntity<Object> deleteCustomer(
 			@ApiParam(value = "Identifier of the Customer", required = true) @PathVariable("id") Long id) {
 		String accept = request.getHeader("Accept");
 		if (accept != null && accept.contains("application/json")) {
@@ -65,13 +67,14 @@ public class CustomerApiController implements CustomerApi {
 				Optional<Customer> customer = service.findCustomerById(id);
 				if (customer.isPresent()) {
 					service.deleteCustomer(customer.get().getId());
-				}
-				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+					return  ResponseEntity.ok("Customer Deleted");
+				} 	
+				
 			} catch (Exception e) {
-				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+				return new ResponseEntity<>("Bad Request",HttpStatus.BAD_REQUEST);
 			}
 		}
-		return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+		return new ResponseEntity<>("Customer Not Present In Database",HttpStatus.NOT_FOUND);
 	}
 
 	public ResponseEntity<List<Customer>> listCustomer() {

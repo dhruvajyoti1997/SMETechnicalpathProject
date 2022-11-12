@@ -1,19 +1,16 @@
 package io.swagger.serviceImpl;
 
-import java.text.Format.Field;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ReflectionUtils;
-import org.springframework.validation.Errors;
 
 import io.swagger.dao.customerDao;
 import io.swagger.model.Customer;

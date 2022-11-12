@@ -23,7 +23,6 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import io.swagger.model.Customer;
-import io.swagger.model.CustomerUpdate;
 import io.swagger.model.Error;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2022-08-24T07:46:52.134Z")
@@ -59,7 +58,7 @@ public interface CustomerApi {
 			@ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
 	@RequestMapping(value = "/customer/{id}", produces = { "application/json;charset=utf-8" }, consumes = {
 			"application/json;charset=utf-8" }, method = RequestMethod.DELETE)
-	ResponseEntity<Void> deleteCustomer(
+	ResponseEntity<Object> deleteCustomer(
 			@ApiParam(value = "Identifier of the Customer", required = true) @PathVariable("id") Long id);
 
 //    @ApiOperation(value = "List or find Customer objects", nickname = "listCustomer", notes = "This operation list or find Customer entities", response = Customer.class, responseContainer = "List", tags={ "customer", })

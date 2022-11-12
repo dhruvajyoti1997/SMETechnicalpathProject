@@ -17,5 +17,4 @@ public class globalExceptionHandler {
 		return new ResponseEntity<String>("The Customer Id is already present in the DataBase !!", HttpStatus.BAD_REQUEST);
 		
 	}
-	
 }
