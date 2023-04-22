@@ -43,6 +43,7 @@ io\swagger\configuration\CustomInstantDeserializer$4.class
 io\swagger\api\HubApi.class
 io\swagger\model\CreditProfile.class
 io\swagger\model\CustomerStateChangeEventPayload.class
+io\swagger\globalException\ErrorDetails.class
 io\swagger\service\customerService.class
 io\swagger\Swagger2SpringBoot$MyConfig.class
 io\swagger\configuration\CustomInstantDeserializer.class

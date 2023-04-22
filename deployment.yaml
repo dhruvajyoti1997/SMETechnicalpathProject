@@ -1,0 +1,45 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: springboot-docker-container
+  labels:
+    name: springboot-docker-container
+spec:
+  ports:
+    - nodePort: 30163 
+      port: 8080      
+      targetPort: 8080  
+      protocol: TCP
+  selector:           
+    app: springboot-docker-container
+  type: NodePort       
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: springboot-docker-container
+spec:                
+  selector:         
+    matchLabels:
+      app: springboot-docker-container
+  replicas: 1        
+  template:
+    metadata:
+      labels:        
+        app: springboot-docker-container
+    spec:
+      containers:
+        - env:
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: a5@2K414*
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://localhost:3306/springjdbc?autoReconnect=true&useSSL=false
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+          image: javatechie01/capstone-project:1
+          name: springboot-docker-container
+          ports:
+            - containerPort: 8080
+          resources: {}
+      restartPolicy: Always   

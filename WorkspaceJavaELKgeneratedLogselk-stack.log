@@ -1,0 +1,175 @@
+2023-01-18 10:33:05.951  INFO 9916 --- [main] io.swagger.Swagger2SpringBoot            : Starting Swagger2SpringBoot on MSI with PID 9916 (D:\WorkspaceJava\spring-server\target\classes started by Dhruva's PC in D:\WorkspaceJava\spring-server)
+2023-01-18 10:33:05.953  INFO 9916 --- [main] io.swagger.Swagger2SpringBoot            : No active profile set, falling back to default profiles: default
+2023-01-18 10:33:06.012  INFO 9916 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@140c9f39: startup date [Wed Jan 18 10:33:06 IST 2023]; root of context hierarchy
+2023-01-18 10:33:07.795  INFO 9916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a2a88e84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-18 10:33:08.380  INFO 9916 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2023-01-18 10:33:08.394  INFO 9916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-18 10:33:08.396  INFO 9916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2023-01-18 10:33:08.532  INFO 9916 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-18 10:33:08.532  INFO 9916 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2529 ms
+2023-01-18 10:33:08.692  INFO 9916 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2023-01-18 10:33:08.698  INFO 9916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-01-18 10:33:08.698  INFO 9916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-01-18 10:33:08.699  INFO 9916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2023-01-18 10:33:08.699  INFO 9916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2023-01-18 10:33:09.571  INFO 9916 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-01-18 10:33:09.592  INFO 9916 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-01-18 10:33:09.709  INFO 9916 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-01-18 10:33:09.712  INFO 9916 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-01-18 10:33:09.715  INFO 9916 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-01-18 10:33:09.763  INFO 9916 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-01-18 10:33:09.855 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@35329a05
+2023-01-18 10:33:09.855 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@35329a05
+2023-01-18 10:33:09.855 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@35329a05
+2023-01-18 10:33:09.855 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@333e5fb6
+2023-01-18 10:33:09.858 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@3041beb3
+2023-01-18 10:33:09.858 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@19647566
+2023-01-18 10:33:09.861 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@71b3ba5a
+2023-01-18 10:33:09.861 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@71b3ba5a
+2023-01-18 10:33:09.861 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@71b3ba5a
+2023-01-18 10:33:09.863 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@67f591c2
+2023-01-18 10:33:09.864 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@67f591c2
+2023-01-18 10:33:09.864 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@67f591c2
+2023-01-18 10:33:09.868 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@986b619
+2023-01-18 10:33:09.868 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@986b619
+2023-01-18 10:33:09.868 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@986b619
+2023-01-18 10:33:09.870 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@448086ab
+2023-01-18 10:33:09.870 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@448086ab
+2023-01-18 10:33:09.870 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@448086ab
+2023-01-18 10:33:09.872 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3cf8a235
+2023-01-18 10:33:09.873 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3cf8a235
+2023-01-18 10:33:09.873 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@3cf8a235
+2023-01-18 10:33:09.885 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@37d3aa8c
+2023-01-18 10:33:09.885 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@37d3aa8c
+2023-01-18 10:33:09.885 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@37d3aa8c
+2023-01-18 10:33:09.888 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@fee881
+2023-01-18 10:33:09.888 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@fee881
+2023-01-18 10:33:09.888 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@fee881
+2023-01-18 10:33:09.891 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@7878bbdb
+2023-01-18 10:33:09.891 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@7878bbdb
+2023-01-18 10:33:09.893 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2e1ba142
+2023-01-18 10:33:09.893 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2e1ba142
+2023-01-18 10:33:09.894 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@77cd235b
+2023-01-18 10:33:09.895 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@77cd235b
+2023-01-18 10:33:09.897 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@204b0f07
+2023-01-18 10:33:09.898 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7f53fc38
+2023-01-18 10:33:09.899 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@7462ba4b
+2023-01-18 10:33:09.900 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@7462ba4b
+2023-01-18 10:33:09.900 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@7d126083
+2023-01-18 10:33:09.901 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@7d126083
+2023-01-18 10:33:09.902 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@6d617b07
+2023-01-18 10:33:09.903 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6d617b07
+2023-01-18 10:33:09.904 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@6cee903a
+2023-01-18 10:33:09.904 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@6cee903a
+2023-01-18 10:33:09.904 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@6cee903a
+2023-01-18 10:33:09.905 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@10a0d93a
+2023-01-18 10:33:09.907 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@29aa4bc9
+2023-01-18 10:33:09.909 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@29aa4bc9
+2023-01-18 10:33:09.910 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@29aa4bc9
+2023-01-18 10:33:09.911 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@1530d0f2
+2023-01-18 10:33:09.913 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@c754401
+2023-01-18 10:33:09.913 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@c754401
+2023-01-18 10:33:09.914 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@11c3d22f
+2023-01-18 10:33:09.914 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@11c3d22f
+2023-01-18 10:33:09.915 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@5158a9f7
+2023-01-18 10:33:09.915 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5158a9f7
+2023-01-18 10:33:09.916 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@121cf6f4
+2023-01-18 10:33:09.916 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@121cf6f4
+2023-01-18 10:33:09.918 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@403f7aa2
+2023-01-18 10:33:09.918 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@403f7aa2
+2023-01-18 10:33:09.919 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@27dfd12b
+2023-01-18 10:33:09.920 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@56872fcb
+2023-01-18 10:33:09.921 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@56872fcb
+2023-01-18 10:33:09.921 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@56872fcb
+2023-01-18 10:33:09.922 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5f2b9da8
+2023-01-18 10:33:09.923 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5f2b9da8
+2023-01-18 10:33:09.923 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5f2b9da8
+2023-01-18 10:33:09.925 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@fe08eaf
+2023-01-18 10:33:09.926 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@445058e8
+2023-01-18 10:33:09.928 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@1b444b5
+2023-01-18 10:33:09.928 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@1b444b5
+2023-01-18 10:33:09.928 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@1b444b5
+2023-01-18 10:33:09.929 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2acca224
+2023-01-18 10:33:09.929 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2acca224
+2023-01-18 10:33:09.929 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2acca224
+2023-01-18 10:33:09.930 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@39acd1f1
+2023-01-18 10:33:09.931 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@4a105556
+2023-01-18 10:33:09.935 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@299a43d9
+2023-01-18 10:33:09.935 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@299a43d9
+2023-01-18 10:33:09.936 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@768f4b42
+2023-01-18 10:33:09.939 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@566f4659
+2023-01-18 10:33:09.939 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@566f4659
+2023-01-18 10:33:09.942 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@70ee9d31
+2023-01-18 10:33:09.943 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@70ee9d31
+2023-01-18 10:33:09.943 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2b2b7e3c
+2023-01-18 10:33:09.943 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@661db63e
+2023-01-18 10:33:09.944 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@2558f65c
+2023-01-18 10:33:09.947 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@62b786dc
+2023-01-18 10:33:09.947 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@62b786dc
+2023-01-18 10:33:09.948 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7c31e410
+2023-01-18 10:33:09.948 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@9880a15
+2023-01-18 10:33:09.948 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@6febec41
+2023-01-18 10:33:09.948 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3de88f64
+2023-01-18 10:33:09.948 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4e8afdad
+2023-01-18 10:33:09.948 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@79b8ecb
+2023-01-18 10:33:09.949 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@3722f39d
+2023-01-18 10:33:09.949 DEBUG 9916 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4ec8d9b2
+2023-01-18 10:33:09.975  INFO 9916 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-18 10:33:10.324 TRACE 9916 --- [main] org.hibernate.type.TypeFactory           : Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@27746c5e
+2023-01-18 10:33:10.462  INFO 9916 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2023-01-18 10:33:10.621  INFO 9916 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18 10:33:10.923 DEBUG 9916 --- [main] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2023-01-18 10:33:11.406  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/{limit}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<io.swagger.model.Customer>> io.swagger.api.CustomerApiController.listCustomerWithSLimit(int)
+2023-01-18 10:33:11.407  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/customer],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.Customer> io.swagger.api.CustomerApiController.createCustomer(io.swagger.model.Customer)
+2023-01-18 10:33:11.408  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/customer/{id}],methods=[DELETE],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> io.swagger.api.CustomerApiController.deleteCustomer(java.lang.Long)
+2023-01-18 10:33:11.409  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/retrieveCustomer],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<io.swagger.model.Customer>> io.swagger.api.CustomerApiController.listCustomer()
+2023-01-18 10:33:11.409  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/customer/{id}],methods=[PATCH],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.Customer> io.swagger.api.CustomerApiController.patchCustomer(java.lang.Long,java.util.Map<java.lang.Object, java.lang.Object>)
+2023-01-18 10:33:11.409  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/customer/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.Customer> io.swagger.api.CustomerApiController.retrieveCustomer(java.lang.Long)
+2023-01-18 10:33:11.409  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/customer/updateDetails],methods=[PUT],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.Customer> io.swagger.api.CustomerApiController.updateCustomer(io.swagger.model.Customer)
+2023-01-18 10:33:11.411  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/hub],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.EventSubscription> io.swagger.api.HubApiController.registerListener(io.swagger.model.EventSubscriptionInput)
+2023-01-18 10:33:11.411  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/hub/{id}],methods=[DELETE],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> io.swagger.api.HubApiController.unregisterListener(java.lang.String)
+2023-01-18 10:33:11.414  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/listener/customerDeleteEvent],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.EventSubscription> io.swagger.api.ListenerApiController.listenToCustomerDeleteEvent(io.swagger.model.CustomerDeleteEvent)
+2023-01-18 10:33:11.414  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/listener/customerStateChangeEvent],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.EventSubscription> io.swagger.api.ListenerApiController.listenToCustomerStateChangeEvent(io.swagger.model.CustomerStateChangeEvent)
+2023-01-18 10:33:11.415  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/listener/customerCreateEvent],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.EventSubscription> io.swagger.api.ListenerApiController.listenToCustomerCreateEvent(io.swagger.model.CustomerCreateEvent)
+2023-01-18 10:33:11.415  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tmf-api/customerManagement/v4/listener/customerAttributeValueChangeEvent],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<io.swagger.model.EventSubscription> io.swagger.api.ListenerApiController.listenToCustomerAttributeValueChangeEvent(io.swagger.model.CustomerAttributeValueChangeEvent)
+2023-01-18 10:33:11.415  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String io.swagger.configuration.HomeController.index()
+2023-01-18 10:33:11.417  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-01-18 10:33:11.418  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-01-18 10:33:11.419  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-01-18 10:33:11.421  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-01-18 10:33:11.421  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-01-18 10:33:11.544  INFO 9916 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2023-01-18 10:33:11.651  INFO 9916 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@140c9f39: startup date [Wed Jan 18 10:33:06 IST 2023]; root of context hierarchy
+2023-01-18 10:33:11.701  INFO 9916 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-01-18 10:33:11.701  INFO 9916 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-01-18 10:33:11.714  INFO 9916 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2023-01-18 10:33:11.953  INFO 9916 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2023-01-18 10:33:11.961  INFO 9916 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-01-18 10:33:11.961  INFO 9916 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-18 10:33:11.982  INFO 9916 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-18 10:33:12.057  INFO 9916 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-18 10:33:12.279  INFO 9916 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: patchCustomer_1
+2023-01-18 10:33:12.450  INFO 9916 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2023-01-18 10:33:12.455  INFO 9916 --- [main] io.swagger.Swagger2SpringBoot            : Started Swagger2SpringBoot in 6.913 seconds (JVM running for 7.511)
+2023-01-18 10:34:46.682  INFO 9916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2023-01-18 10:34:46.684  INFO 9916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2023-01-18 10:34:46.729  INFO 9916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+2023-01-18 10:34:47.070  INFO 9916 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2023-01-18 10:34:47.360 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [27862162]
+2023-01-18 10:34:47.417 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [BIGINT]) - [0]
+2023-01-18 10:34:47.451 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [27862162]
+2023-01-18 10:34:47.530 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [70119203465]
+2023-01-18 10:34:47.531 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Kolkata]
+2023-01-18 10:34:47.531 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [majid.abdul@outlook.com]
+2023-01-18 10:34:47.531 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Abdul majid]
+2023-01-18 10:34:47.531 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [9139201583]
+2023-01-18 10:34:47.532 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [Active]
+2023-01-18 10:34:47.532 TRACE 9916 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [27862162]
+2023-01-18 10:34:50.940 TRACE 9916 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [27862162]
+2023-01-18 10:34:50.958 TRACE 9916 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [BIGINT]) - [1]
+2023-01-18 10:34:50.961 ERROR 9916 --- [http-nio-8080-exec-2] io.swagger.api.CustomerApiController     : Duplicate Customer 
+2023-01-18 10:36:40.943 TRACE 9916 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [27862162]
+2023-01-18 10:36:40.945 TRACE 9916 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [BIGINT]) - [1]
+2023-01-18 10:36:40.947 ERROR 9916 --- [http-nio-8080-exec-3] io.swagger.api.CustomerApiController     : Duplicate Customer 

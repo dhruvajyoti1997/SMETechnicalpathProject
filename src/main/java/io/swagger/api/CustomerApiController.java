@@ -1,5 +1,6 @@
 package io.swagger.api;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -16,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -48,12 +50,19 @@ public class CustomerApiController implements CustomerApi {
 		String accept = request.getHeader("Accept");
 		try {
 			if (accept != null && accept.contains("application/json")) {
-				return new ResponseEntity<Customer>(service.saveCustomer(customer), HttpStatus.CREATED);
+				
+				Customer savedCustomer = service.saveCustomer(customer);
+				//to show the location in the response  header
+				URI uriLocation = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedCustomer.getId()).toUri();
+				//return new ResponseEntity<Customer>(service.saveCustomer(customer), HttpStatus.CREATED);
+				return ResponseEntity.created(uriLocation).build();
 			}
 		} catch (Exception e) {
 
 			// return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
+			log.error("Duplicate Customer ", String.valueOf(e));
 			throw new DuplicateKeyException(String.valueOf(e));
+			
 		}
 		
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
@@ -67,10 +76,12 @@ public class CustomerApiController implements CustomerApi {
 				Optional<Customer> customer = service.findCustomerById(id);
 				if (customer.isPresent()) {
 					service.deleteCustomer(customer.get().getId());
+					log.info("Customer Deleted with ID", id);
 					return  ResponseEntity.ok("Customer Deleted");
 				} 	
 				
 			} catch (Exception e) {
+				log.error("Customer Not Found with ID : {}",id);
 				return new ResponseEntity<>("Bad Request",HttpStatus.BAD_REQUEST);
 			}
 		}

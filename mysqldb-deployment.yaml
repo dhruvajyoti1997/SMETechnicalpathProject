@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose -f docker-compose.yml convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mysqldb
+  name: mysqldb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mysqldb
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose -f docker-compose.yml convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: mysqldb
+    spec:
+      containers:
+        - env:
+            - name: MYSQL_DATABASE
+              value: springjdbc
+            - name: MYSQL_PASSWORD
+              value: a5@2K414*
+            - name: MYSQL_ROOT_PASSWORD
+              value: a5@2K414*
+            - name: MYSQL_ROOT_USER
+              value: root
+          image: javatechie01/capstone-project:2
+          name: mysqldb
+          ports:
+            - containerPort: 3307
+          resources: {}
+      restartPolicy: Always
+status: {}

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: capstone-project-k8s-deployment
+  labels:
+    app: docker-k8s-deployment
+spec:
+  selector:
+    matchLabels:
+      app: docker-k8s-deployment
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-deployment
+    spec:
+      containers:
+      - name: spring-server
+        image: javatechie01/capstone-project
+        ports:
+        - containerPort: 8080
