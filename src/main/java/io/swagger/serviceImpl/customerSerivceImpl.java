@@ -1,5 +1,6 @@
 package io.swagger.serviceImpl;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -103,5 +104,17 @@ public class customerSerivceImpl implements customerService {
 		return customerdao.save(customer_Details);
 
 	}
+
+	@Override
+	public List<Customer> getLimitedCustomerData(int limit, int offset) {
+
+		List<Customer> getData = customerdao.retrieveCustomerDetails(limit, offset);
+		if (getData != null) {
+			return getData;
+		}
+
+		return Collections.emptyList();
+	}
+
 
 }

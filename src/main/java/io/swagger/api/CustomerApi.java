@@ -12,10 +12,12 @@ import javax.validation.Valid;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -96,7 +98,10 @@ public interface CustomerApi {
 
 	@RequestMapping(value = "/{limit}", method = RequestMethod.GET)
 	ResponseEntity<List<Customer>> listCustomerWithSLimit(@PathVariable int limit);
-
+   
+	@RequestMapping(value="/limitCustomerData",method=RequestMethod.GET)
+	ResponseEntity<List<Customer>> limitCustomerData(@RequestParam(value = "limit", required = false) Integer limit , @RequestParam(value = "page", required = false) Integer page);
+	
 	@ApiOperation(value = "Updates partially a Customer", nickname = "patchCustomer", notes = "This operation updates partially a Customer entity.", response = Customer.class, tags = {
 			"customer", })
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Updated", response = Customer.class),

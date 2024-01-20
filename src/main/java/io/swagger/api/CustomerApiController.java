@@ -55,7 +55,7 @@ public class CustomerApiController implements CustomerApi {
 				//to show the location in the response  header
 				URI uriLocation = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedCustomer.getId()).toUri();
 				//return new ResponseEntity<Customer>(service.saveCustomer(customer), HttpStatus.CREATED);
-				return ResponseEntity.created(uriLocation).build();
+				return ResponseEntity.created(uriLocation).body(savedCustomer);
 			}
 		} catch (Exception e) {
 
@@ -183,6 +183,13 @@ public class CustomerApiController implements CustomerApi {
 			return new ResponseEntity<Customer>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
+	}
+
+	@Override
+	public ResponseEntity<List<Customer>> limitCustomerData(Integer limit, Integer page) {
+		
+		List<Customer> data = service.getLimitedCustomerData(Integer.valueOf(limit), Integer.valueOf(page));
+		 	return new ResponseEntity<List<Customer>>(data, HttpStatus.OK);
 	}
 
 	/*

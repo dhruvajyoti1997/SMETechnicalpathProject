@@ -23,6 +23,7 @@ public interface customerService {
 	public Customer updateCustomerDetailsPartially(Long id, Map<Object, Object> objectMap);
 	
 	public Customer updateCustomerDetails(Customer customer);
-	
+
+	public List<Customer> getLimitedCustomerData(int limit, int offset);
 
 }
