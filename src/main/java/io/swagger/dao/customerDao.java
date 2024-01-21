@@ -18,6 +18,7 @@ public interface customerDao  extends JpaRepository<Customer, Long>{
 	  public List<Customer> getAllUserLimitData(@Param("limit") int limit);
 	  
 	 
-	  @Procedure(value = "RETRIEVE_CUSTOMER")
-	  public List<Customer> retrieveCustomerDetails(int limit, int offset);
+	  //@Procedure(value = "RETRIEVE_CUSTOMER")
+	  @Query(nativeQuery = true,value = "{CALL RETRIEVE_CUSTOMER(:limit_val, :offset_val)};")
+	  public List<Customer> retrieveCustomerDetails(@Param("limit_val") int limit, @Param("offset_val") int offset);
 }
